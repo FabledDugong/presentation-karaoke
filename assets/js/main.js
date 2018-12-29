@@ -10,7 +10,7 @@ if ((now - cleared) > 1000 * 60 * 60 * 2) {
 let audio = document.querySelector("audio"),
     muteButton = document.querySelector("#mute"),
     muted = false;
-audio.volume = 0.7;
+audio.volume = 0.5;
 muteButton.addEventListener('click', () => {
     if ( muted !== true ) {
         audio.muted = true;
