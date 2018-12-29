@@ -1,0 +1,30 @@
+{
+  "topics": [
+    {"name": "zvířata"},
+    {"name": "apple"},
+    {"name": "microsoft"},
+    {"name": "jelení lůj"},
+    {"name": "vesmír"},
+    {"name": "tesla"},
+    {"name": "fotbal"},
+    {"name": "hokej"},
+    {"name": "curling"},
+    {"name": "vánoce"},
+    {"name": "anime"},
+    {"name": "euro"},
+    {"name": "evropská unie"},
+    {"name": "soudní moc"},
+    {"name": "prezident"},
+    {"name": "hasiči"},
+    {"name": "kinematografie"},
+    {"name": "ikea"},
+    {"name": "šachy"},
+    {"name": "deskové hry"},
+    {"name": "ježíšek"},
+    {"name": "káva"},
+    {"name": "metro"},
+    {"name": "brno"},
+    {"name": "praha"},
+    {"name": "slovenská republika"}
+  ]
+}

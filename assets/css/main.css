@@ -1,0 +1,273 @@
+html, body, div, #settings .settings-division #settings-controls, span, applet, object, iframe, h1, h2, h3, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, input, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  -moz-box-sizing: border-box; }
+
+@font-face {
+  src: url("../font/Raleway-Thin.ttf") format("truetype");
+  font-style: normal;
+  font-family: "Raleway-Thin"; }
+@font-face {
+  src: url("../font/Raleway-Light.ttf") format("truetype");
+  font-style: normal;
+  font-family: "Raleway-Light"; }
+@font-face {
+  src: url("../font/Raleway-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-family: "Raleway-Regular"; }
+@font-face {
+  src: url("../font/Raleway-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-family: "Raleway-SemiBold"; }
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway-Regular", sans-serif;
+  color: #000; }
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  padding: 0 10vmin;
+  border-bottom: 0.1vmin solid #E4E4E4; }
+
+header, section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100vw;
+  height: 100vh;
+  padding: 10vmin;
+  background: #fff; }
+
+canvas {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  z-index: 0; }
+
+h1, h2, h3 {
+  margin: 0 0 1vmin 0;
+  font-size: 5vmin;
+  text-transform: uppercase;
+  color: #2A2766; }
+
+h2 {
+  border: none;
+  font-family: "Raleway-Thin", sans-serif;
+  font-size: 4vmin;
+  color: #928B29; }
+
+h3 {
+  margin: 0 0 3vmin 0;
+  border-bottom: 0.2vmin solid #2A2766;
+  font-size: 3vmin; }
+
+h4 {
+  font-size: 2vmin;
+  text-transform: uppercase;
+  text-align: center;
+  color: #2A2766; }
+
+p {
+  line-height: 1.5;
+  font-size: 2vmin; }
+
+span {
+  margin: 0 0 0 2vmin;
+  font-family: "Raleway-SemiBold", sans-serif;
+  text-transform: uppercase;
+  color: #928B29;
+  cursor: pointer; }
+
+mark {
+  background: none;
+  font-family: "Raleway-SemiBold", sans-serif;
+  color: #2A2766; }
+
+form {
+  width: 100%; }
+
+input {
+  width: 3vw;
+  margin: 0 0 0 2vmin;
+  background: transparent;
+  border-bottom: 0.1vmin solid #E4E4E4;
+  outline: none; }
+  input::-webkit-input-placeholder {
+    color: #E4E4E4; }
+  input::-moz-placeholder {
+    color: #E4E4E4; }
+  input::-ms-input-placeholder {
+    color: #E4E4E4; }
+  input::placeholder {
+    color: #E4E4E4; }
+  input[type="number"] {
+    font-size: 2vmin;
+    text-align: right;
+    color: #2A2766; }
+  input[type="submit"], button {
+    width: 5vw;
+    height: 5vh;
+    padding: 1vmin;
+    background: #2A2766;
+    border: none;
+    text-transform: uppercase;
+    color: #fff; }
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0; }
+
+textarea {
+  width: 100%;
+  height: 15vh;
+  margin: 1vmin 0 0;
+  padding: 1vmin;
+  background: transparent;
+  border: 0.1vmin solid #E4E4E4;
+  resize: none;
+  font-family: "Raleway-Regular", sans-serif;
+  font-size: 1.5vmin; }
+
+.alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  position: fixed;
+  top: 5vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 35vw;
+  height: 10vh;
+  line-height: 1.1;
+  font-family: "Raleway-Light", sans-serif;
+  font-size: 2.5vmin;
+  text-align: center; }
+  .alert.warning {
+    background: #928B29;
+    color: #fff; }
+
+#intro {
+  height: 90vh;
+  padding-top: 5vmin;
+  border-bottom: 0.1vmin solid #E4E4E4; }
+  #intro #introDivision {
+    display: flex; }
+
+#settings {
+  display: flex;
+  padding: 0; }
+  #settings .settings-division {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin: 10vmin 0 0 10vmin;
+    padding: 5vmin;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: 10; }
+    #settings .settings-division h4 {
+      text-align: left; }
+    #settings .settings-division div, #settings .settings-division #settings-controls {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 0 2vmin 0; }
+    #settings .settings-division #settings-controls {
+      justify-content: space-between;
+      margin: 2vmin 0 0; }
+      #settings .settings-division #settings-controls input {
+        margin: 0; }
+
+#game {
+  display: none;
+  justify-content: center;
+  align-items: center; }
+  #game #countdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #game #countdown h4 {
+      font-size: 10vmin; }
+  #game #endgame {
+    display: none;
+    justify-content: space-between;
+    width: 25vw;
+    margin: 3vmin 0 0 0; }
+    #game #endgame button {
+      width: 10vw;
+      height: 7vh;
+      font-size: 1.5vmin; }
+      #game #endgame button:first-of-type {
+        background: #928B29; }
+
+.logo {
+  width: 5vmin;
+  height: 5vmin; }
+
+::-webkit-scrollbar-track {
+  background: #E4E4E4; }
+
+::-webkit-scrollbar {
+  width: 0.75vmin;
+  background: #E4E4E4; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #2A2766; }
+
+/*# sourceMappingURL=main.css.map */
