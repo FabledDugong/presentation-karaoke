@@ -15,8 +15,8 @@ html(lang="cs")
         nav#navigation
             img(src="assets/img/icons/pk_logo.svg", alt="logo").logo
             div
-                span#mute mute
-                span help
+                span#mute ztlumit
+                span pomoc
                 span
                     a(href="https://github.com/FabledDugong/presentation-karaoke" target="blank") github
         header#intro
@@ -36,16 +36,16 @@ html(lang="cs")
                     h4 témata
                     textarea(name="topics" placeholder="Zadejte vlastní témata, oddělujte čárkami...")
                     #settings-controls
-                        button#settopics set new topics
-                        button#setdefault default topics
-                        button#change change topic
-                        input(type="submit" value="play")#play
+                        button#settopics vlastní témata
+                        button#setdefault základní témata
+                        button#change nové téma
+                        input(type="submit" value="hrát")#play
         section#game
             #countdown
                 h2
                 h4
             #endgame
-                button#adjust adjust settings
-                button#again play again
+                button#adjust upravit nastavení
+                button#again hrát znovu
 
         script(src="assets/js/main.js", type="text/javascript")

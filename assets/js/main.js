@@ -15,21 +15,20 @@ muteButton.addEventListener('click', () => {
     if ( muted !== true ) {
         audio.muted = true;
         muted = !muted;
-        muteButton.innerText = "unmute";
+        muteButton.innerText = "zesílit";
         localStorage.setItem("muted", muted);
     } else {
         audio.muted = false;
         muted = !muted;
-        muteButton.innerText = "mute";
+        muteButton.innerText = "ztlumit";
         localStorage.setItem("muted", muted);
     }
 });
 if (localStorage.getItem("muted") === "true") {
     audio.muted = true;
     muted = !muted;
-    muteButton.innerText = "unmute";
+    muteButton.innerText = "zesílit";
 }
-
 
 let change_topic = document.querySelector("#change"),
     set_topics = document.querySelector("#settopics"),
@@ -109,6 +108,8 @@ function settings() {
     }
 }
 
+//TODO split by newline
+
 function setTopics() {
     let topics = document.querySelector("[name='topics']").value;
     if (topics === "") {
@@ -170,10 +171,10 @@ function Text(x, y, dx, dy, fs, content, is_chosen) {
     };
 
     this.update = () => {
-        if (this.x > innerWidth || this.x < 0) {
+        if ((this.x + c.measureText(this.content).width) > innerWidth || this.x < 0) {
             this.dx = -this.dx;
         }
-        if ((this.y > innerHeight) || (this.y < 0)) {
+        if ((this.y > innerHeight) || (this.y + c.measureText(this.content).height < 0)) {
             this.dy = -this.dy;
         }
         this.x += this.dx;
