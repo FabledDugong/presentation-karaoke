@@ -73,9 +73,13 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
   width: 100vw;
   height: 10vh;
   padding: 0 10vmin;
+  background: #fff;
   border-bottom: 0.1vmin solid #E4E4E4; }
 
 header, section {
@@ -98,7 +102,7 @@ h1, h2, h3 {
   margin: 0 0 1vmin 0;
   font-size: 4vmin;
   text-transform: uppercase;
-  color: #021B79; }
+  color: #fff; }
 
 h2 {
   border: none;
@@ -109,17 +113,19 @@ h2 {
 h3 {
   margin: 0 0 3vmin 0;
   border-bottom: 0.2vmin solid #021B79;
-  font-size: 3vmin; }
+  font-size: 3vmin;
+  color: #021B79; }
 
 h4 {
   font-size: 2vmin;
   text-transform: uppercase;
   text-align: center;
-  color: #021B79; }
+  color: #0575E6; }
 
 p {
   line-height: 1.5;
-  font-size: 2vmin; }
+  font-size: 2vmin;
+  text-align: justify; }
 
 span {
   margin: 0 0 0 2vmin;
@@ -219,15 +225,21 @@ button {
     height: 100%;
     padding: 0 10vmin; }
     #intro .intro-division:first-of-type {
-      border-right: 0.1vmin solid #E4E4E4; }
+      background: linear-gradient(#021B79, #0575E6);
+      border-right: 0.1vmin solid #E4E4E4;
+      color: #fff; }
     #intro .intro-division div, #intro .intro-division #settings .settings-division #settings-controls, #settings .settings-division #intro .intro-division #settings-controls {
       margin: 0 0 2vmin 0; }
+    #intro .intro-division #footer p {
+      font-size: 1.75vmin;
+      color: #0575E6; }
     #intro .intro-division h2 {
       font-family: "Raleway-Light", sans-serif;
       margin: 2vmin 0 1vmin 0; }
 
 #settings {
   display: flex;
+  height: 90vh;
   padding: 0; }
   #settings .settings-division {
     display: flex;

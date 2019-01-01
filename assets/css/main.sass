@@ -12,9 +12,13 @@ nav
   flex-direction: row
   justify-content: space-between
   align-items: center
+  position: -webkit-sticky
+  position: sticky
+  top: -1px
   width: 100vw
   height: 10vh
   padding: 0 10vmin
+  background: #fff
   border-bottom: 0.1vmin solid $supplementary-color
 
 header, section
@@ -37,7 +41,7 @@ h1
   margin: 0 0 1vmin 0
   font-size: 4vmin
   text-transform: uppercase
-  color: $main-color
+  color: #fff
 h2
   @extend h1
   border: none
@@ -49,14 +53,16 @@ h3
   margin: 0 0 3vmin 0
   border-bottom: 0.2vmin solid $main-color
   font-size: 3vmin
+  color: $main-color
 h4
   font-size: 2vmin
   text-transform: uppercase
   text-align: center
-  color: $main-color
+  color: $secondary-color
 p
   line-height: 1.5
   font-size: 2vmin
+  text-align: justify
 span
   margin: 0 0 0 2vmin
   font-family: $distinctive-font
@@ -152,15 +158,22 @@ button
     height: 100%
     padding: 0 10vmin
     &:first-of-type
+      background: linear-gradient($main-color, $secondary-color)
       border-right: 0.1vmin solid $supplementary-color
+      color: #fff
     div
       margin: 0 0 2vmin 0
+    #footer
+      p
+        font-size: 1.75vmin
+        color: $secondary-color
     h2
       font-family: $title-font
       margin: 2vmin 0 1vmin 0
 
 #settings
   display: flex
+  height: 90vh
   padding: 0
   .settings-division
     display: flex
@@ -170,6 +183,7 @@ button
     padding: 5vmin
     background: rgba(255,255,255,0.75)
     z-index: 10
+
     h4
       text-align: left
     div

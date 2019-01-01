@@ -287,7 +287,8 @@ function game() {
         section_settings.style.display = 'none';
         section_game.style.display = 'flex';
         topic_display.style.display = 'block';
-        topic_display.innerHTML = "Your topic is " + "<mark>" + obj.topics[chosen].name + "</mark>";
+        topic_display.innerHTML = "Vaše téma je " + "<mark>" + obj.topics[chosen].name + "</mark>";
+        let ss;
         let cd = setInterval(() => {
             countdown_display.innerHTML = count.toString();
             if (count === 0) {
@@ -302,7 +303,7 @@ function game() {
                     endgame.style.display = 'flex';
                 }, localStorage.getItem("duration") * 1000);
                 section_game.style.background = 'url("' + img.imgs[rand].url + '") center center no-repeat / contain';
-                let ss = setInterval(() => {
+                ss = setInterval(() => {
                     rand = Math.floor((Math.random() * 10) + 1);
                     section_game.style.background = 'url("' + img.imgs[rand].url + '") center center no-repeat / contain';
                 }, localStorage.getItem("change") * 1000);
