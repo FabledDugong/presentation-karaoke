@@ -96,26 +96,26 @@ canvas {
 
 h1, h2, h3 {
   margin: 0 0 1vmin 0;
-  font-size: 5vmin;
+  font-size: 4vmin;
   text-transform: uppercase;
-  color: #2A2766; }
+  color: #021B79; }
 
 h2 {
   border: none;
   font-family: "Raleway-Thin", sans-serif;
   font-size: 4vmin;
-  color: #928B29; }
+  color: #0575E6; }
 
 h3 {
   margin: 0 0 3vmin 0;
-  border-bottom: 0.2vmin solid #2A2766;
+  border-bottom: 0.2vmin solid #021B79;
   font-size: 3vmin; }
 
 h4 {
   font-size: 2vmin;
   text-transform: uppercase;
   text-align: center;
-  color: #2A2766; }
+  color: #021B79; }
 
 p {
   line-height: 1.5;
@@ -125,13 +125,13 @@ span {
   margin: 0 0 0 2vmin;
   font-family: "Raleway-SemiBold", sans-serif;
   text-transform: uppercase;
-  color: #928B29;
+  color: #0575E6;
   cursor: pointer; }
 
 mark {
   background: none;
   font-family: "Raleway-SemiBold", sans-serif;
-  color: #2A2766; }
+  color: #021B79; }
 
 form {
   width: 100%; }
@@ -153,12 +153,12 @@ input {
   input[type="number"] {
     font-size: 2vmin;
     text-align: right;
-    color: #2A2766; }
+    color: #021B79; }
   input[type="submit"], button {
     width: 5vw;
     height: 5vh;
     padding: 1vmin;
-    background: #2A2766;
+    background: #0575E6;
     border: none;
     text-transform: uppercase;
     color: #fff; }
@@ -178,6 +178,9 @@ textarea {
   resize: none;
   font-family: "Raleway-Regular", sans-serif;
   font-size: 1.5vmin; }
+
+button {
+  background: #021B79; }
 
 .alert {
   display: flex;
@@ -199,15 +202,29 @@ textarea {
   font-size: 2.5vmin;
   text-align: center; }
   .alert.warning {
-    background: #928B29;
+    background: #0575E6;
     color: #fff; }
 
 #intro {
+  flex-direction: row;
   height: 90vh;
-  padding-top: 5vmin;
+  padding: 0;
   border-bottom: 0.1vmin solid #E4E4E4; }
-  #intro #introDivision {
-    display: flex; }
+  #intro .intro-division {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50vw;
+    height: 100%;
+    padding: 0 10vmin; }
+    #intro .intro-division:first-of-type {
+      border-right: 0.1vmin solid #E4E4E4; }
+    #intro .intro-division div, #intro .intro-division #settings .settings-division #settings-controls, #settings .settings-division #intro .intro-division #settings-controls {
+      margin: 0 0 2vmin 0; }
+    #intro .intro-division h2 {
+      font-family: "Raleway-Light", sans-serif;
+      margin: 2vmin 0 1vmin 0; }
 
 #settings {
   display: flex;
@@ -254,11 +271,15 @@ textarea {
       height: 7vh;
       font-size: 1.5vmin; }
       #game #endgame button:first-of-type {
-        background: #928B29; }
+        background: #0575E6; }
 
 .logo {
   width: 5vmin;
   height: 5vmin; }
+
+.icon {
+  width: 7vmin;
+  height: 7vmin; }
 
 ::-webkit-scrollbar-track {
   background: #E4E4E4; }
@@ -268,6 +289,6 @@ textarea {
   background: #E4E4E4; }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #2A2766; }
+  background-color: #0575E6; }
 
 /*# sourceMappingURL=main.css.map */

@@ -44,7 +44,6 @@ let canvas = document.querySelector("canvas"),
 
 canvas.width = section_settings.offsetWidth;
 canvas.height = section_settings.offsetHeight;
-c.fillStyle = "#928B29";
 
 let topic = '{\n' +
     '  "topics": [\n' +
@@ -159,24 +158,37 @@ function Text(x, y, dx, dy, fs, content, is_chosen) {
     this.content = content;
     this.is_chosen = is_chosen;
 
+    this.change = {
+        x: false,
+        y: false
+    };
+
     this.say = () => {
         if (this.is_chosen === 1) {
-            c.fillStyle = "#2A2766";
+            c.fillStyle = "#021B79";
             c.font = this.fs * 1.25 + "px" + " Raleway-SemiBold";
         } else {
-            c.fillStyle = "#928B29";
+            c.fillStyle = "#0575E6";
             c.font = this.fs + "px" + " Raleway-Thin";
         }
+
+        this.width = c.measureText(this.content.toUpperCase()).width;
         c.fillText((this.content).toUpperCase(), this.x, this.y);
     };
 
     this.update = () => {
-        if ((this.x + c.measureText(this.content).width) > innerWidth || this.x < 0) {
+        if ((this.x + this.width >= innerWidth || this.x < 0) && !this.change.x) {
             this.dx = -this.dx;
-        }
-        if ((this.y > innerHeight) || (this.y + c.measureText(this.content).height < 0)) {
+            this.change.x = true;
+        } else if(this.x + this.width <= innerWidth && this.x > 0)
+            this.change.x = false;
+
+        if ((this.y > innerHeight || this.y <= (this.fs * 0.90)) && !this.change.y) {
             this.dy = -this.dy;
-        }
+            this.change.y = true;
+        } else if(this.y < innerHeight && this.y >= (this.fs * 0.90))
+            this.change.y = false;
+
         this.x += this.dx;
         this.y += this.dy;
         this.say();
@@ -194,8 +206,8 @@ function changeTopic() {
 
     for (i = 0; i < count; i++) {
         is_chosen = 0;
-        x = Math.random() * section_settings.offsetWidth;
-        y = Math.random() * section_settings.offsetHeight;
+        x = section_settings.offsetWidth / 1.75;
+        y = section_settings.offsetHeight / 2;
         dx = (Math.random() - 0.5) * 5;
         dy = (Math.random() - 0.5) * 5;
         fs = ((Math.random() * 50) + 5).toString();
