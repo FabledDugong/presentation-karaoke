@@ -254,7 +254,8 @@ let imgs = '{\n' +
     '    {"url": "https://cdn.britannica.com/s:500x350/94/81294-004-87D1E0A5.jpg"},\n' +
     '    {"url": "https://m.static.lagardere.cz/frekvence1/2018/03/shutterstock-579877090-610x451.jpg"},\n' +
     '    {"url": "https://1gr.cz/fotky/idnes/07/101/maxi/PKA1e30ef_crash.jpg"},\n' +
-    '    {"url": "https://www.edolo.cz/data/images/thumb/752_d3bd00e65f.jpg"}\n' +
+    '    {"url": "https://www.edolo.cz/data/images/thumb/752_d3bd00e65f.jpg"},\n' +
+    '    {"url": "https://www.kachwanya.com/wp-content/uploads/2015/10/kachwanya-2.jpg"}\n' +
     '  ]\n' +
     '}';
 let img = JSON.parse(imgs);
@@ -308,8 +309,10 @@ function game() {
                     endgame.style.display = 'flex';
                 }, localStorage.getItem("duration") * 1000);
                 section_game.style.background = 'url("' + img.imgs[rand].url + '") center center no-repeat / contain';
+                console.log(img.imgs[rand].url);
                 ss = setInterval(() => {
-                    rand = Math.floor((Math.random() * 10) + 1);
+                    rand = Math.floor((Math.random() * 10));
+                    console.log(img.imgs[rand].url);
                     section_game.style.background = 'url("' + img.imgs[rand].url + '") center center no-repeat / contain';
                 }, localStorage.getItem("change") * 1000);
             }
