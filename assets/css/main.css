@@ -75,7 +75,7 @@ nav {
   align-items: center;
   position: -webkit-sticky;
   position: sticky;
-  top: -1px;
+  top: -0.1px;
   width: 100vw;
   height: 10vh;
   padding: 0 10vmin;
@@ -100,7 +100,8 @@ canvas {
 
 h1, h2, h3 {
   margin: 0 0 1vmin 0;
-  font-size: 4vmin;
+  border-bottom: 0.2vmin solid #fff;
+  font-size: 4.5vmin;
   text-transform: uppercase;
   color: #fff; }
 
@@ -120,7 +121,7 @@ h4 {
   font-size: 2vmin;
   text-transform: uppercase;
   text-align: center;
-  color: #0575E6; }
+  color: #021B79; }
 
 p {
   line-height: 1.5;
@@ -167,7 +168,8 @@ input {
     background: #0575E6;
     border: none;
     text-transform: uppercase;
-    color: #fff; }
+    color: #fff;
+    cursor: pointer; }
 
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   display: none;
@@ -228,11 +230,10 @@ button {
       background: linear-gradient(#021B79, #0575E6);
       border-right: 0.1vmin solid #E4E4E4;
       color: #fff; }
+      #intro .intro-division:first-of-type h2 {
+        color: #fff; }
     #intro .intro-division div, #intro .intro-division #settings .settings-division #settings-controls, #settings .settings-division #intro .intro-division #settings-controls {
       margin: 0 0 2vmin 0; }
-    #intro .intro-division #footer p {
-      font-size: 1.75vmin;
-      color: #0575E6; }
     #intro .intro-division h2 {
       font-family: "Raleway-Light", sans-serif;
       margin: 2vmin 0 1vmin 0; }
@@ -276,13 +277,13 @@ button {
   #game #endgame {
     display: none;
     justify-content: space-between;
-    width: 25vw;
+    width: 22.5vw;
     margin: 3vmin 0 0 0; }
     #game #endgame button {
       width: 10vw;
       height: 7vh;
       font-size: 1.5vmin; }
-      #game #endgame button:first-of-type {
+      #game #endgame button:last-of-type {
         background: #0575E6; }
 
 .logo {
@@ -302,5 +303,39 @@ button {
 
 ::-webkit-scrollbar-thumb {
   background-color: #0575E6; }
+
+.arrow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%; }
+  .arrow .icon {
+    cursor: pointer; }
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes flash {
+  from,
+50%,
+to {
+    opacity: 1; }
+  25%,
+75% {
+    opacity: 0; } }
+@keyframes flash {
+  from,
+50%,
+to {
+    opacity: 1; }
+  25%,
+75% {
+    opacity: 0; } }
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash; }
 
 /*# sourceMappingURL=main.css.map */

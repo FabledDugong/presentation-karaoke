@@ -177,16 +177,16 @@ function Text(x, y, dx, dy, fs, content, is_chosen) {
     };
 
     this.update = () => {
-        if ((this.x + this.width >= innerWidth || this.x < 0) && !this.change.x) {
+        if ((this.x + this.width >= canvas.width || this.x < 0) && !this.change.x) {
             this.dx = -this.dx;
             this.change.x = true;
-        } else if(this.x + this.width <= innerWidth && this.x > 0)
+        } else if(this.x + this.width <= canvas.width && this.x > 0)
             this.change.x = false;
 
-        if ((this.y > innerHeight || this.y <= (this.fs * 0.90)) && !this.change.y) {
+        if ((this.y > canvas.height || this.y <= (this.fs * 0.90)) && !this.change.y) {
             this.dy = -this.dy;
             this.change.y = true;
-        } else if(this.y < innerHeight && this.y >= (this.fs * 0.90))
+        } else if(this.y < canvas.height && this.y >= (this.fs * 0.90))
             this.change.y = false;
 
         this.x += this.dx;
@@ -206,8 +206,8 @@ function changeTopic() {
 
     for (i = 0; i < count; i++) {
         is_chosen = 0;
-        x = section_settings.offsetWidth / 1.75;
-        y = section_settings.offsetHeight / 2;
+        x = canvas.width / 1.75;
+        y = canvas.height / 2;
         dx = (Math.random() - 0.5) * 5;
         dy = (Math.random() - 0.5) * 5;
         fs = ((Math.random() * 50) + 5).toString();
@@ -275,6 +275,7 @@ function game() {
     if (settings() != 0) {
         warn();
     } else {
+        audio.pause();
         let count = 3,
             topic_display = countdown.querySelector('h2'),
             countdown_display = countdown.querySelector('h4'),
@@ -282,6 +283,7 @@ function game() {
         if (endgame.style.display !== 'none') {
             endgame.style.display = 'none';
         }
+        countdown_display.innerHTML = "připravte se";
         section_navigation.style.display = 'none';
         section_intro.style.display = 'none';
         section_settings.style.display = 'none';
@@ -327,7 +329,25 @@ adjust.addEventListener('click', () => {
     section_settings.style.display = 'flex';
     section_game.style.display = 'none';
     location.href = '#settings';
+    audio.play();
 });
 again.addEventListener('click', () => {
     game();
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+let arrow = document.querySelector('.arrow .icon');
+arrow.addEventListener('animationend', () => {
+    arrow.classList.remove('flash');
+});
+arrow.onmouseenter = () => {
+    arrow.classList.add('flash');
+};

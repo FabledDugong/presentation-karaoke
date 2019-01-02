@@ -6,6 +6,13 @@ html(lang="cs")
         meta(name="description")
         meta(name="keywords")
         meta(name="author" content="Michal Zouhar")
+        meta(name="msapplication-TileColor" content="#ffffff")
+        meta(name="theme-color" content="#ffffff")
+        link(rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png")
+        link(rel="mask-icon" href="safari-pinned-tab.svg" color="#021b79")
+        link(rel="manifest" href="site.webmanifest")
         link(href="assets/css/main.css", rel="stylesheet")
         title Prezentační karaoke
     body
@@ -16,17 +23,22 @@ html(lang="cs")
             img(src="assets/img/icons/pk_logo.svg", alt="logo").logo
             div
                 span#mute ztlumit
-                span pomoc
+                span
+                    a(href="https://www.linkedin.com/in/michal-zouhar-000" target="blank") autor
                 span
                     a(href="https://github.com/FabledDugong/presentation-karaoke" target="blank") github
         header#intro
             div.intro-division
                 div
                     h1 prezentační karaoke
-                    p Prezentační karaoke je společenská (kolektivní) hra, jejímž cílem je takzvaně probořit ledy – zmírnit nebo zcela odstranit problémy s komunikací v určité skupině lidí. Hra spočívá v tom, že jeden či více hráčů se vžije do role prezentujícího, který musí vést prezentaci na náhodné téma pomocí náhodné slideshow.
-                    img(src="assets/img/icons/down-arrow.svg", alt="icon").icon
-                div#footer
-                    p Tento projekt vznikl v rámci Studentského Trenérského Centra, programu společnosti Microsoft Česká republika, jako absolventská práce studenta Michala Zouhara.
+                    p Prezentační karaoke je společenská hra, jejímž cílem je takzvaně probořit ledy. Hra spočívá v tom, že jeden či více hráčů se vžije do role prezentujícího, který musí vést prezentaci na náhodné téma s pomocí náhodné slideshow.
+                    h2 jak hrát
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper maximus bibendum. Quisque at porta elit. Suspendisse accumsan magna ligula, sit amet ullamcorper eros mollis non.
+                    h2 pravidla
+                    p Zaměření témat ani jejich počet není nijak omezen. Počet prezentujících hráčů není nijak omezen, běžné jsou však samostatné prezentace nebo dvoučlenné a tříčlenné týmy. Maximální doba trvání prezentace není specifikována, avšak minimální doba trvání prezentace je 1 vteřina, to samé platí pro čas mezi jednotlivými snímky. Je-li je hra brána jako soutěž, pak kritéria, která určují vítěze mohou být libovolně zvolená organizátory.
+                div.arrow
+                    a(href="#settings")
+                        img(src="assets/img/icons/down-arrow.svg", alt="icon").icon.animated.flash
             div.intro-division
                 div
                     img(src="assets/img/icons/theater.svg", alt="icon").icon
