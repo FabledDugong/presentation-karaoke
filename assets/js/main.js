@@ -195,7 +195,7 @@ function Text(x, y, dx, dy, fs, content, is_chosen) {
     };
 }
 
-let i, j, x, y, dx, dy, fs, content, chosen, random, is_chosen = 0, texts = [], cc = 0, count = 75;
+let i, j, x, y, dx, dy, fs, content, chosen, random, is_chosen = 0, texts = [], cc = 0, count = 100;
 
 function changeTopic() {
     texts.length = 0;

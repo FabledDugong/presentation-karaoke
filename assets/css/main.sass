@@ -20,6 +20,11 @@ nav
   padding: 0 10vmin
   background: #fff
   border-bottom: 0.1vmin solid $supplementary-color
+  div
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
 
 header, section
   display: flex
@@ -38,11 +43,10 @@ canvas
   z-index: 0
 
 h1
-  margin: 0 0 1vmin 0
-  border-bottom: 0.2vmin solid #fff
-  font-size: 4.5vmin
+  margin: 0 0 0 3vmin
+  font-size: 3.5vmin
   text-transform: uppercase
-  color: #fff
+  color: $main-color
 
 h2
   @extend h1
