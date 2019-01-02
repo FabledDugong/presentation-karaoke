@@ -210,7 +210,7 @@ function changeTopic() {
         y = canvas.height / 2;
         dx = (Math.random() - 0.5) * 5;
         dy = (Math.random() - 0.5) * 5;
-        fs = ((Math.random() * 50) + 5).toString();
+        fs = ((((Math.random() * 50) + 10) * canvas.width) / 1920).toString();
         random = Math.floor((Math.random() * obj.topics.length));
         content = obj.topics[random].name;
         if (chosen === random) {
@@ -227,7 +227,7 @@ changeTopic();
 
 function animate() {
     requestAnimationFrame(animate);
-    c.clearRect(0, 0, innerWidth, innerHeight);
+    c.clearRect(0, 0, canvas.width, canvas.height);
     for (j = 0; j < texts.length; j++) {
         texts[j].update();
     }
@@ -239,19 +239,22 @@ change_topic.addEventListener('click', (ev) => {
     ev.preventDefault();
     changeTopic();
 });
+window.onresize = () => {
+  changeTopic();
+};
 
 let imgs = '{\n' +
     '  "imgs": [\n' +
-    '    {"url": "https://www.kachwanya.com/wp-content/uploads/2015/10/kachwanya-2.jpg"},\n' +
+    '    {"url": "https://i.kym-cdn.com/entries/icons/mobile/000/025/526/gnome.jpg"},\n' +
     '    {"url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/TandemTurkey01_ST_05.jpg"},\n' +
     '    {"url": "https://i1.wp.com/www.zmescience.com/wp-content/uploads/2016/12/Capture.png?resize=1439%2C785"},\n' +
     '    {"url": "https://www.bleepstatic.com/content/posts/2018/03/12/NSA-Shadow-Brokers.png"},\n' +
     '    {"url": "https://static.politico.com/dims4/default/fe652c1/2147483647/resize/1160x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F61%2F43%2F5abc0c294137a8329f76dd8ac7f3%2Ffbi-2-ap.jpg"},\n' +
     '    {"url": "https://img.cncenter.cz/img/12/normal1050/4970502_pariz-francie-v0.jpg?v=0"},\n' +
-    '    {"url": "http://www.seflsa.estranky.cz/img/original/5/dsc_8405.jpg"},\n' +
+    '    {"url": "https://cdn.britannica.com/s:500x350/94/81294-004-87D1E0A5.jpg"},\n' +
     '    {"url": "https://m.static.lagardere.cz/frekvence1/2018/03/shutterstock-579877090-610x451.jpg"},\n' +
     '    {"url": "https://1gr.cz/fotky/idnes/07/101/maxi/PKA1e30ef_crash.jpg"},\n' +
-    '    {"url": "http://www.edolo.cz/data/images/thumb/752_d3bd00e65f.jpg"}\n' +
+    '    {"url": "https://www.edolo.cz/data/images/thumb/752_d3bd00e65f.jpg"}\n' +
     '  ]\n' +
     '}';
 let img = JSON.parse(imgs);
