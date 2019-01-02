@@ -62,6 +62,12 @@ html {
   src: url("../font/Raleway-SemiBold.ttf") format("truetype");
   font-style: normal;
   font-family: "Raleway-SemiBold"; }
+::selection {
+  background: #E4E4E4; }
+
+::-moz-selection {
+  background: #E4E4E4; }
+
 body {
   display: flex;
   flex-direction: column;
@@ -135,6 +141,7 @@ p {
 span {
   margin: 0 0 0 2vmin;
   font-family: "Raleway-SemiBold", sans-serif;
+  font-size: 2vmin;
   text-transform: uppercase;
   color: #0575E6;
   cursor: pointer; }
@@ -190,6 +197,14 @@ textarea {
   resize: none;
   font-family: "Raleway-Regular", sans-serif;
   font-size: 1.5vmin; }
+  textarea::-webkit-input-placeholder {
+    color: #E4E4E4; }
+  textarea::-moz-placeholder {
+    color: #E4E4E4; }
+  textarea::-ms-input-placeholder {
+    color: #E4E4E4; }
+  textarea::placeholder {
+    color: #E4E4E4; }
 
 button {
   background: #021B79; }
@@ -244,6 +259,7 @@ button {
 
 #settings {
   display: flex;
+  flex-direction: row;
   height: 90vh;
   padding: 0; }
   #settings .settings-division {
@@ -341,5 +357,29 @@ to {
 .flash {
   -webkit-animation-name: flash;
   animation-name: flash; }
+
+@media (max-width: 319px) {
+  * {
+    display: none; } }
+@media (min-width: 320px) and (max-width: 641px) {
+  h2 {
+    font-size: 5vmin; }
+
+  p {
+    font-size: 3vmin; }
+
+  #intro {
+    flex-direction: column;
+    height: 100%; }
+    #intro .intro-division {
+      width: 100vw;
+      height: 75vh; }
+
+  #settings {
+    flex-direction: column;
+    align-items: center; }
+    #settings .settings-division {
+      width: 75vw;
+      margin-left: 0; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,11 @@
 @import "reset"
 @import "variables"
 
+::selection
+  background: $supplementary-color
+::-moz-selection
+  background: $supplementary-color
+
 body
   display: flex
   flex-direction: column
@@ -76,6 +81,7 @@ p
 span
   margin: 0 0 0 2vmin
   font-family: $distinctive-font
+  font-size: 2vmin
   text-transform: uppercase
   color: $secondary-color
   cursor: pointer
@@ -97,13 +103,10 @@ input
 
   &::-webkit-input-placeholder
     color: $supplementary-color
-
   &::-moz-placeholder
     color: $supplementary-color
-
   &::-ms-input-placeholder
     color: $supplementary-color
-
   &::placeholder
     color: $supplementary-color
 
@@ -137,6 +140,14 @@ textarea
   resize: none
   font-family: $content-font
   font-size: 1.5vmin
+  &::-webkit-input-placeholder
+    color: $supplementary-color
+  &::-moz-placeholder
+    color: $supplementary-color
+  &::-ms-input-placeholder
+    color: $supplementary-color
+  &::placeholder
+    color: $supplementary-color
 
 button
   @extend input[type="submit"]
@@ -194,6 +205,7 @@ button
 
 #settings
   display: flex
+  flex-direction: row
   height: 90vh
   padding: 0
 
@@ -302,3 +314,24 @@ button
 .flash
   -webkit-animation-name: flash
   animation-name: flash
+
+@media (max-width: 319px)
+  *
+    display: none
+@media (min-width: 320px) and (max-width: 641px)
+  h2
+    font-size: 5vmin
+  p
+    font-size: 3vmin
+  #intro
+    flex-direction: column
+    height: 100%
+    .intro-division
+      width: 100vw
+      height: 75vh
+  #settings
+    flex-direction: column
+    align-items: center
+    .settings-division
+      width: 75vw
+      margin-left: 0
